@@ -1,0 +1,43 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is React app by Shyam",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyambharg/REACT1.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Shyam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shyambharg/REACT1/issues"
+  },
+  "homepage": "https://github.com/shyambharg/REACT1#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.5.0",
+    "autoprefixer": "^9.8.8",
+    "dom": "^0.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.1",
+    "router": "^2.0.0",
+    "stream": "^0.0.3"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

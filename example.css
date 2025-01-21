@@ -1,0 +1,205 @@
+.logo {
+    width: 80px;
+    height: 100%;
+    border-radius: 100px;
+
+}
+
+.qoute {
+  font-family: 'Papyrus';
+  font-size: 80px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-img {
+  max-width: 100%;
+  opacity: 0.5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    
+    
+   
+    
+    height: 70px;
+}
+
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+    font-family: 'Papyrus';
+    font-weight: bold;
+    color: black;
+    align-items: center;
+}
+
+.nav-items > ul > li {
+    padding: 8px 40px;
+    color: black;
+}
+
+.nav-items > ul :hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.res-image {
+    /* width: 100%;
+    height: 50%; */
+    /* border-radius: 20px 20px 0px 0px; */
+    width: 100%;
+    height: 60%;
+}
+
+
+
+.res-card {
+   
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 0px 0px 20px 20px;
+    color: black;
+    font-family:'Papyrus';
+    transition: box-shadow 0.3s ease;
+}
+
+
+.res-card:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+}
+
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 110px;
+    
+}
+
+.res-info {
+  margin-left: 20px;
+}
+
+.button {
+    font-family: 'Papyrus';
+    border-radius: 4px;
+    background-color: #f4511e;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+
+  .shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 110px;
+  }
+
+  .shimmer-card {
+    padding: 5px;
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 0px 0px 20px 20px;
+    font-family:'Papyrus';
+    transition: box-shadow 0.3s ease;
+    background-color: gainsboro;
+  }
+
+
+
+  .log-btn {
+    padding: 0 20px; 
+  }
+
+  .search-container {
+    padding-left: 350px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  .search {
+    width: 500px;
+    height: 50px;
+    margin-top: 10px;
+    font-family: 'Papyrus';
+    font-size: larger;
+    border-radius: 20px;
+  }
+
+  .search-btn {
+    font-family: 'Papyrus';
+    border-radius: 20px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    width : 200px;
+    height: 55px;
+    margin-top: 8px;
+  }
+
+
+  .user-card{
+    padding: 5px;
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+    background-color: lemonchiffon;
+    border-radius: 0px 0px 20px 20px;
+    color: black;
+    font-family:'Papyrus';
+    transition: box-shadow 0.3s ease;
+  }
+
+  .user-card:hover{
+    box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
+  }
+
+  .user-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .home{
+    display: flex;
+    font-size: 28px;
+    
+  }
+
+  .home > p{
+    text-align: center;
+    text-decoration: wavy;
+    padding: 2px;
+  } 
+
+  .back {
+    background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+  }
+
+
+  .resback {
+    background-image: url("https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+  }

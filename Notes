@@ -1,0 +1,144 @@
+# Package json is a configuration for npm. 
+# Used to add dependencies in to the project. 
+
+
+
+Setup Steps :
+
+1) create index.html and type html:5 with a root element with ID root 
+2) add script with type "module" and css src in the head element APP.js , index.css 
+3a) either you can install react using cdn links (just like adding script src)  (Old and basic way)
+    Instead
+3b) Install node in the system then in the terminal give the commands as follows 
+        npm -init y 
+        and follow the steps to create package.json (# Package json is a configuration for npm.) Used to add dependencies in to the project. 
+
+    To Overcome all this we have Parcel (npm install -D parcel )
+            (After this you will have node modules and package-lock.json in the project)
+
+        So after this to RUN the project use the below command 
+            npx parcel index.html  (As replacement go to package.json file and in the scripts add "start" : "parcel index.html",
+                                                                                                  "build" : "parcel build index.html")
+
+                                                                                            Now we can use "npm run start" or "npm run build" to start the project
+        
+        So now after this using npm we install react and react-dom (replacement of CDN links )
+                npm install react 
+                npm install react-dom
+
+4) create a app component then use that component to pass in the react render for root 
+
+              const AppLayout  = () => {
+                return (
+                    <div>
+                    App Content Root 
+                    </div>
+                )
+              }      
+              const root = ReactDOM.createRoot(document.getElementById("root"));
+              root.render(<AppLayout/>);
+
+
+
+There are two types of dependencies 
+    Dev dependency (Used for development phase)
+    Normal dependency 
+
+
+^ used before version to have automatic minor upgrade of package 
+~ used for major upgrade
+
+
+RUNNING THE APP
+    npx parcel index.html 
+
+
+JSX is HTML like javscript 
+    babel is used to convert JSX to HTML
+
+Everything in React is a component 
+
+Components : Two Types
+
+    Class Based Component (Old way)
+    Functional Based Component (New way)
+        Means a normal javascript function which returns 
+
+
+    Props 
+        is nothing but passing arguments to the above function which is called as Functional Component
+    
+
+
+
+Optimizing App :
+    Performance improvement to prevent the delay caused by bundling in large scale application (Parcel will bundle all the js files to one index file index.js)
+
+    Lazy Loading / On demand loading 
+        This means the application will not load few components unless demanded or clicked on it. 
+            instead of importing a component using import key word we will use the import() function
+                Example : 
+                        const Grocery = lazy(()=>{
+                            import("./components/Grocery")  // the component path in the application
+                        })
+            after this we have to wrap the component when ever using inside a suspense component 
+                Example :
+                        <Suspense fallback ={<Shimmer/>}> <Grocery> </Suspense>    
+
+
+Styling :
+
+    Tailwind CSS 
+        Install the tailwind to react app using the command from the website
+        Then use the classes on the go. 
+
+
+Lifting the State Up
+    In some scenarios we might have to control the parents state variable from child. In an controlled component
+        In that case we will pass the setState to the child component as a function. 
+        
+Props Drilling 
+    Process of sharing the variable between multiple components. when passing the data to multiple level down the page we will passing through the components as props. This is called as Props drilling.
+
+    To overcome this in a multi level chained components we have React Context 
+        creating the component using the function createContext and then fetching the value using the hook called useContext 
+        If we want to change the value of the context then we will use 
+                <Component.Provider value={{ variableValue : newValue }}>
+                    <Components which will need the above context data should be wrapped inside the provider>
+                </Component.Provider>
+
+
+    
+
+
+
+
+
+
+
+
+REDUX 
+    Redux store is a very big JS object kept in the central global space.
+    
+    and to avoid confusion we have something called Slices to divide the categories of data.
+
+    Adding data to Redux Store is not done directly. 
+
+            When ever you intiated the adding data it will dispatch and Action which invoke a function (Reducer) that will add data to slice of the redux store
+
+    Loading data from Redux Store Slice. 
+
+            We use Selector to read data from store and update in the application (Subscribing to the store) which will be done automatically.
+
+    
+        ADD  --->  Action Dispatched --->  Reducer ---> Slice Updated  <--- Selector   <--- (Subscribed to the Slice via Selector)  Application
+
+
+    Configuartion 
+
+        install @reduxjs/toolkit and react-redux
+        Build Our Redux Store
+        Connect Our Store to App
+        Create a Slice
+        Dispatch Action
+        Selector
